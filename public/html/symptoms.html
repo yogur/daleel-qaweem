@@ -1,0 +1,20 @@
+<h2 class="text-center" >الأعراض</h2 >
+<div class="pre-scrollable" >
+<table class="table table-striped">
+    <tr  ng-repeat="symptom in symptoms | orderBy:'name'">
+
+        <td>
+            <button class="btn" ng-click="editSymptom(symptom._id,symptom.name,symptom.description)">
+                <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;تعديل
+            </button>
+        </td>
+        <td>
+            <button class="btn" ng-click="deleteSymptom(symptom._id)">
+                <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;حذف
+            </button>
+        </td>
+        <td class="text-right">{{symptom.name}}</td>
+        </tr>
+    </table>
+
+</div>

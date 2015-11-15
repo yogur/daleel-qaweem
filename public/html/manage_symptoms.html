@@ -1,0 +1,22 @@
+
+<body ng-controller="SymptomsController as symptomController">
+
+<div class="container-fluid">
+  <div class="col-md-6" ng-include="'html/symptoms_form.html'"></div>
+  <div class="col-md-6" ng-include="'html/symptoms.html'"></div>
+
+
+  <!-- Loader template -->
+  <script type="text/ng-template"
+          id="example-loader.tpl.html">
+    <div class="flyover">
+      <div class="mask"></div>
+      <div class="alert alert-info">
+        <strong>Loading...</strong>
+      </div>
+    </div>
+  </script>
+  <div ng-http-loader template="example-loader.tpl.html"></div>
+
+
+</div>

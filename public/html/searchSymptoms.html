@@ -1,0 +1,35 @@
+<link rel="stylesheet" href = "../stylesheets/angucomplete-alt.css">
+
+<div class="jumbotron text-center">
+    <h2>بحث في الأعراض</h2>
+
+    <div class="container">
+    <div angucomplete-alt id="ex1"
+         placeholder="بحث"
+         maxlength="50"
+         pause="100"
+         selected-object="symptomSelected"
+         local-data="symptoms_arr"
+         search-fields="name"
+         title-field="name"
+         minlength="1"
+         input-class="form-control form-control-small text-right"
+         match-class="highlight"
+         text-searching="جاري البحث ..."
+         clear-selected="true"></div>
+    </div>
+
+    <ul class="list-unstyled list-inline">
+        <li ng-repeat="res in topics_result | orderBy:'count'">{{res.title}} : {{res.count}}</li>
+    </ul>
+
+        <div class="form-inline">
+            <div class="input-group" ng-repeat="sel_sympt in sel_sympts">
+      <span class="input-group-btn">
+        <button class="btn btn-default glyphicon glyphicon-remove" type="button" ng-click="removeSymptom($index,sel_sympt.originalObject._id)"></button>
+      </span>
+                <input type="text" class="form-control text-right" value="{{sel_sympt.title}}" readonly>
+            </div><!-- /input-group -->
+        </div><!-- /.form-inline -->
+
+</div>
