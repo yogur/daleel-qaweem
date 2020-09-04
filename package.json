@@ -5,6 +5,6 @@
     "angucomplete-alt": "^2.1.0",
     "body-parser": "~1.0.1",
     "express": "~4.0.0",
-    "mongodb": "~2.0.44"
+    "mongodb": "~3.6.1"
   }
 }
